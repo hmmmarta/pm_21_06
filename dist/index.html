@@ -6,124 +6,252 @@
     <title>dash.</title>
     <link rel="stylesheet" href="css\bootstrap.min.css">
     <link rel="stylesheet" href="css\styles.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    
-    <div class="d-flex">
+    <div class="container-fluid p-0 m-0">
+      <div class="d-flex">
         <div class="sidebar-menu">
-            <img class="app-logo" src="C:\Навчання\web\app\img\logo.png">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">IMO Report</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contract Report</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Users</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">CRM</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">MDM</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Plan Builder</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Settings</a>
-                </li>
-              </ul>
-              <div class="container-fluid">
-                <div class="collapse navbar-collapse" >
-                  
-                </div>
-              </div>
-            </nav>  
-            <!-- <h1 class="dash">
-                dash.
-            </h1>
-            <div class="block">
-                
-                <div class="line">
-                    <h5 class="report">
-                        Contract Report
-                    </h5>
-
-                </div>
-            </div>  -->
+          <nav class="navbar" >
+            <ul class="nav-item logo">
+              <a class="navbar-brand" href="#">
+                <img src="C:\Навчання\web\app\img\logo.png" width="46" height="auto" class="d-inline-block align-top" alt="">
+                 dash.
+                </a>
+            </ul>
             
-        </div> 
+          </nav>
+         
+              <nav class="navbar navbar-expand-lg ">
+                  <ul class="navbar-nav flex-column">
+                    
+                      <li class="nav-item item">
+                            <a class="nav-link" href="#">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+                                <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z"/>
+                              </svg>
+                              <span class="ml-2">IMO Report</span>
+                            </a>
+                      </li>
+                      
+                      <li class="nav-item item">
+                            <a class="nav-link" href="#">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-fill" viewBox="0 0 16 16">
+                                <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3z"/>
+                              </svg>
+                              <span class="ml-2">Contract Report</span>
+                            </a>
+                      </li>
+  
+                      <li class="nav-item item">
+                        <a class="nav-link" href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-fill" viewBox="0 0 16 16">
+                            <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3z"/>
+                          </svg>
+                          <span class="ml-2">Users</span>
+                        </a>
+                      </li>
+  
+                      <li class="nav-item item">
+                        <a class="nav-link" href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3-fill" viewBox="0 0 16 16">
+                            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2H0zm0 1v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3H0z"/>
+                          </svg>
+                          <span class="ml-2">CRM</span>
+                        </a>
+                      </li>
+  
+                      <li class="nav-item item">
+                        <a class="nav-link" href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
+                          </svg>
+                          <span class="ml-2">MDM</span>
+                        </a>
+                      </li>
+  
+                      <li class="nav-item item">
+                        <a class="nav-link" href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                          </svg>
+                          <span class="ml-2">Plan Builder</span>
+                        </a>
+                      </li>
+  
+                      <li class="nav-item item">
+                        <a class="nav-link" href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                          </svg>
+                          <span class="ml-2">Settings</span>
+                        </a>
+                      </li>
+                    
+                    
+                  </ul>
+              </nav>
+        </div>
 
         
-        <!-- <div class="d-flex">
-            <div class="sidebar-menu">
-              <nav class="navbar">
-                <ul class="navbar-nav d-flex flex-column justify-content-between">
-                  <li class="nav-item">
-                    <div class="d-flex justify-content-center align-items-center">
-                      <img src="file:///C:/LPNU/Web/Lab/app/img/iconHome.png" alt="iconHome">
-                    </div>
-                    <a class="nav-link active text-center" aria-current="page" href="#">Dashboard</a>
+        <!-- <div class="main-content"> -->
+        <div class="content-wrapper flex-column">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <ul class="navbar-nav flex-row">
+                  <li class="nav-item reports">
+                    <a class="nav-link" href="#">
+                      reports
+                    </a>
                   </li>
-                  <li class="nav-item">
-                    <div class="d-flex justify-content-center align-items-center">
-                      <img src="file:///C:/LPNU/Web/Lab/app/img/iconTransaction.png" alt="iconTransaction">
-                    </div>
-                    <a class="nav-link text-center" href="#">Transaction</a>
-                  </li>
-                  <li class="nav-item">
-                    <div class="d-flex justify-content-center align-items-center">
-                      
-                    </div>
-                    <a class="nav-link text-center" href="#">Account/Cards</a>
-                  </li>
-                  <li class="nav-item">
-                    <div class="d-flex justify-content-center align-items-center">
-                      <img src="file:///C:/LPNU/Web/Lab/app/img/iconFolder.png" alt="iconFolder">
-                    </div>
-                    <a class="nav-link text-center" href="#">Loans/Deposits</a>
-                  </li>
-                  <li class="nav-item">
-                    <div class="d-flex justify-content-center align-items-center">
-                     
-                    </div>
-                    <a class="nav-link text-center" href="#">Cashbank</a>
-                  </li>
-                  <li class="nav-item">
-                    <div class="d-flex justify-content-center align-items-center">
-                      
-                    </div>
-                    <a class="nav-link text-center" href="#">Bank services</a>
-                  </li>
-                  <li class="nav-item">
-                    <div class="d-flex justify-content-center align-items-center">
-                      
-                    </div>
-                    <a class="nav-link text-center" href="#">Support</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-        <div class="content">
-            
-        </div>
-    </div> -->
-    <!-- <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <div class="sidebar menu">
-                    <p>sidebar</p>
-                </div>
-                <div class="content">
-                    <p>content</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
+                  <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                  </button>
+  
+                    <button type="button" class="btn btn-primary dropdown-toggle" style="color: #393f4f" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="C:\Навчання\web\app\img\Ellipse 1 copy.png" width="44" height="auto" class="d-inline-block align-top" alt="">
+                      <span class="position-absolute top-1 start-20 translate-middle border badge rounded-circle bg-#9bf014" style="padding: 5px; background-color: #9bf014; border-color: #4e5c7e !important; top: 11px; left: 50px" >
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                      <span class="text">Vincent Vega</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    </ul>
+                  
+                  <button type="button" class="btn b1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                      <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                    </svg>
+                    
+                      <span class="position-absolute top-1 start-20 translate-middle badge rounded-circle bg-danger" style="padding: 6px;top: 5px; left: 30px; filter: drop-shadow(-6.128px 5.142px 1.5px rgba(0,0,0,0.29))">
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    
+                  </button>
+                  <button type="button" class="btn b2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                      <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                    </svg>
+                    <span class="position-absolute top-1 start-20 translate-middle badge rounded-circle bg-danger" style="padding: 6px; top: 5px; left: 30px; filter: drop-shadow(-6.128px 5.142px 1.5px rgba(0,0,0,0.29))">
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </button>
 
-    <script scr="js\bootstrap.min.js"></script>
+                </ul> 
+              </div>
+              
+            </nav>
+            <div class="search">
+              
+              <ul class="navbar-nav flex-row">
+                
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary1" type="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+                </div>
+                <button class="btn btn-outline-secondary2"  type="button">
+                  <span>Create new value</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                  </svg>
+                </button>
+              </ul>
+            </div>
+            <div class="container-fluid">
+              <div class="row row1">
+                <div class="col-4 el1">col-4</div>
+                <div class="col-4 el2">col-4</div>
+                <div class="col-4 el3">col-4</div>
+              </div>
+              <div class="row row2">
+                <div class="col-8 el4">col-8</div>
+                <div class="col-4 el5">col-4</div>
+              </div>
+              <div class="row row3">
+                <div class="col-8 el6">
+                  <table class="table table-hover m-0">
+                    <thead>
+                      <tr class="heading">
+                        <th scope="col" class="head">date</th>
+                        <th scope="col" class="head">store</th>
+                        <th scope="col" class="head">channel</th>
+                        <th scope="col" class="head">manager</th>
+                        <th scope="col" class="head">status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="date">20-03-2017</th>
+                        <td class="store">Store#1</td>
+                        <td class="channel">Channel#1</td>
+                        <td class="manager">Rudi Doe</td>
+                        <td>Completed</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="date">20-03-2017</th>
+                        <td class="store">Store#2</td>
+                        <td class="channel">Channel#2</td>
+                        <td class="manager">Rian Massive</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="date">20-03-2017</th>
+                        <td class="store">Store#3</td>
+                        <td class="channel">Channel#3</td>
+                        <td class="manager">Anjas Tora</td>
+                        <td>Panding</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="date">20-03-2017</th>
+                        <td class="store">Store#4</td>
+                        <td class="channel">Channel#4</td>
+                        <td class="manager">Lauren Kiev</td>
+                        <td>Completed</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="date">20-03-2017</th>
+                        <td class="store">Store#5</td>
+                        <td class="channel">Channel#5</td>
+                        <td class="manager">Coco Yarn</td>
+                        <td>Completed</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-4 el7">col-4</div>
+              </div>
+            </div>
+        </div>
+        
+        
+        
+      </div>
+      
+    </div>
+      
+
+      
+
+      <script scr="js\bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  
+    
+    
+    
+    
 </body>
 </html>
