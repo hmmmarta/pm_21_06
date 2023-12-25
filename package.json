@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/hmmmarta/pm_21_06#readme",
   "devDependencies": {
+    "browser-sync": "^2.29.3",
     "browsersync": "^0.0.1-security",
     "cssnano": "^6.0.1",
     "gulp": "^4.0.2",

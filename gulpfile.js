@@ -1,3 +1,94 @@
+
+// const { src, dest, watch, series } = require("gulp");
+// const concat = require("gulp-concat");
+// const sass = require("gulp-sass")(require('sass'));
+// const autoprefixer = require("gulp-autoprefixer");
+// const rename = require("gulp-rename");
+// const cssnano = require("gulp-cssnano");
+// const uglify = require("gulp-uglify");
+// const imagemin = require('gulp-imagemin');
+// const browserSync = require('browser-sync').create(); // Import BrowserSync
+
+// // Copy HTML files to the dist folder
+// function task_html() {
+//   return src("app/html/*.html")
+//     .pipe(dest("dist"))
+//     .pipe(browserSync.stream()); // Reload BrowserSync
+// }
+// exports.html = task_html;
+
+
+// // Compile Sass to CSS, add prefixes, and minify
+// function task_sass() {
+//   return src("app/scss/*.scss")
+//     .pipe(concat('styles.scss'))
+//     .pipe(sass())
+//     .pipe(autoprefixer({
+//       cascade: false
+//     }))
+//     .pipe(cssnano())
+//     .pipe(rename({ suffix: '.min' }))
+//     .pipe(dest("dist/css"))
+//     .pipe(browserSync.stream()); // Reload BrowserSync
+// }
+// exports.sass = task_sass;
+
+
+// // Concatenate and minify JS files
+// function task_scripts() {
+//   return src("app/js/*.js")
+//     .pipe(concat('scripts.js'))
+//     .pipe(uglify())
+//     .pipe(rename({ suffix: '.min' }))
+//     .pipe(dest("dist/js"))
+//     //.pipe(browserSync.stream()); // Reload BrowserSync
+// }
+// exports.scripts = task_scripts;
+
+// // Compress images
+// function task_imgs() {
+//   return src("app/img/*.+(jpg|jpeg|png|gif)")
+//     .pipe(imagemin({
+//       progressive: true,
+//       svgoPlugins: [{ removeViewBox: false }],
+//       interlaced: true
+//     }))
+//     .pipe(dest("dist/images"))
+//     .pipe(browserSync.stream()); // Reload BrowserSync
+// }
+// exports.imgs = task_imgs;
+
+
+// // Copy Bootstrap CSS to dist
+// const lib_css_task = () => src('app/css/bootstrap.min.css')
+//   .pipe(dest('dist/css'));
+
+// // Copy Bootstrap JS to dist
+// const lib_js_task = () => src('app/js/bootstrap.min.js')
+//   .pipe(dest('dist/js'));
+
+// // BrowserSync initialization
+// function task_browser_sync() {
+//   browserSync.init({
+//     server: {
+//       baseDir: "./dist",
+//     },
+//   });
+// }
+
+// // Watch for changes in files
+// function task_watch() {
+//   watch("app/html/*.html", task_html);
+//   watch("app/js/*.js", task_scripts);
+//   watch("app/scss/*.scss", task_sass);
+//   watch("app/images/*.+(jpg|jpeg|png|gif)", task_imgs);
+  
+// }
+
+// // Default task with BrowserSync
+// exports.default = series(task_html, task_sass, task_scripts, task_imgs, lib_css_task, lib_js_task, task_browser_sync, task_watch);
+
+
 const { src, dest, watch, series } = require("gulp");
 const concat = require("gulp-concat");
 const sass = require("gulp-sass")(require('sass'));
@@ -6,67 +97,91 @@ const rename = require("gulp-rename");
 const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
 const imagemin = require('gulp-imagemin');
+const browserSync = require('browser-sync').create();
 
-
-
-//копіювання HTML файлів в папку dist
-function task_html () {
+function task_html() {
   return src("app/html/*.html")
-  .pipe(dest("dist"));
+    .pipe(dest("dist"))
+    .pipe(browserSync.stream());
 }
-exports.html = task_html
+exports.html = task_html;
 
-//об'єднання, компіляція Sass в CSS, додавання префіксів і подальша мінімалізація коду
 function task_sass() {
   return src("app/scss/*.scss")
-  .pipe(concat('styles.scss'))
-  .pipe(sass())
-  .pipe(autoprefixer ({
-    cascade: false
-  }))
-  .pipe(cssnano())
-  .pipe(rename({suffix:'.min'}))
-  .pipe(dest("dist/css"));
-} 
-exports.sass = task_sass
-
-//об'єднання і стискання JS-файлів
-function task_scripts() {
-  return src("app/js/*.js")//вихідна директорія файлів
-  .pipe(concat('scripts.js'))//конкатенація js-файлів в один
-  .pipe(uglify())//стиснення коду
-  .pipe(rename({suffix:'.min'}))//перейменування файлу з приставкою .min
-  .pipe(dest("dist/js"));//директорія продакшена
+    .pipe(concat('styles.scss'))
+    .pipe(sass())
+    .pipe(autoprefixer({
+      cascade: false
+    }))
+    .pipe(cssnano())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest("dist/css"))
+    .pipe(browserSync.stream());
 }
-exports.scripts = task_scripts
+exports.sass = task_sass;
 
-//стискання зображень
+function task_scripts() {
+  return src("app/js/*.js")
+    .pipe(concat('scripts.js'))
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest("dist/js"))
+    .pipe(browserSync.stream());
+}
+exports.scripts = task_scripts;
+
 function task_imgs() {
   return src("app/img/*.+(jpg|jpeg|png|gif)")
-  .pipe(imagemin({
-    progressive: true,
-    svgoPlugins: [{removeViewBox: false}],
-    interlaced: true
-  }))
-  .pipe(dest("dist/images"))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{ removeViewBox: false }],
+      interlaced: true
+    }))
+    .pipe(dest("dist/images"))
+    .pipe(browserSync.stream());
 }
-exports.imgs = task_imgs
+exports.imgs = task_imgs;
 
 const lib_css_task = () => src('app/css/bootstrap.min.css')
-.pipe(dest('dist/css'));
+  .pipe(dest('dist/css'));
 
 const lib_js_task = () => src('app/js/bootstrap.min.js')
-.pipe(dest('dist/js'));
+  .pipe(dest('dist/js'));
 
-//відстежування за змінами у файлах
-function task_watch() {
-  watch("app/html/*.html",task_html);
-  watch("app/js/*.js",task_scripts);
-  watch("app/scss/*.scss",task_sass);
-  watch("app/images/*.+(jpg|jpeg|png|gif)",task_imgs);
+function task_copy_images() {
+  return src("app/img/*.*")
+    .pipe(dest("dist/images"));
 }
-exports.watch = task_watch
+exports.copy_images = task_copy_images;
 
-//запуск тасків за замовчуванням
-//exports.build = build;
-exports.default = series(task_html,task_sass,task_scripts,task_imgs,lib_css_task,lib_js_task,task_watch); // GULPFILE
+function task_data_json() {
+  return src("app/database/data.json")
+    .pipe(dest("dist"))
+    .pipe(browserSync.stream()); // якщо ви використовуєте BrowserSync, оновіть сторінку
+}
+exports.data_json = task_data_json;
+
+
+// function task_browser_sync() {
+//   browserSync.init({
+//     server: {
+//       baseDir: "./dist",
+//     },
+//   });
+// }
+
+function task_watch() {
+  browserSync.init({
+    server: {
+      baseDir: './dist'
+    }
+  });
+  watch("app/html/*.html", task_html);
+  watch("app/js/*.js", task_scripts);
+  watch("app/scss/*.scss", task_sass);
+  watch("app/images/*.+(jpg|jpeg|png|gif)", task_imgs);
+}
+
+exports.watch = task_watch;
+
+exports.default = series(task_html, task_sass, task_scripts, task_imgs, lib_css_task, lib_js_task, task_copy_images, task_data_json, task_watch);
